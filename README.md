@@ -1,8 +1,7 @@
 # ReactiveDot
 Web-based IDE for Visual Reactive Programming (VRP) based on Angular, RxJS, Ngrx (Redux), and Material Design. 
 
-## Using starter seed project for Angular 2 - Material Branch with Universal (Server-side rendering) support
-
+> Using starter seed project for Angular 2 - Material Branch with Universal (Server-side rendering) support
 > Featuring Material Design 2, Webpack 2 (and Webpack DLL plugin for faster dev builds), HMR (Hot Module Replacement), @ngrx for state management and optional server-side rendering with Universal.
 
 ###### You can use npm, but it's recommended to use yarn as it installs a lot faster and has other benefits https://yarnpkg.com/ . Make sure you are using yarn version 0.16.0 or newer (check with 'yarn --version')
@@ -14,7 +13,7 @@ yarn
 yarn start
 ```
 
-## Features
+### Features
 
 * Angular 2
   * Async loading
@@ -39,12 +38,12 @@ yarn start
 * Karma/Jasmine testing
 * Protractor for E2E testing
 
-## Project Goals
+### Project Goals
 
 * The main goal is to provide an environment where you can have great dev tools and create a production application without worrying about adding a bunch of stuff yourself.
 * The goal of your design should be so that you can easily copy and paste your app folder and your constants file into to a new update of this project and have it still work. Use constants and have proper separation to make upgrades easy. If you have any suggestions on areas where this starter can be designed to make updates more easy, file an issue.
 
-## Basic scripts
+### Basic scripts
 
 Use `yarn start` for dev server. Default dev port is `3000`.
 
@@ -67,7 +66,7 @@ Use `yarn run compile` instead, it compiles and builds:aot
 The scripts are set to compile css next to scss because ngc compiler does not support Sass.
 To compile scss, use `yarn run sass`, but many of the scripts will either build or watch scss files.
 
-### Store Log Monitor / Store Logger
+#### Store Log Monitor / Store Logger
 
 In development mode, the store log monitor appears on the right hand of your screen. This allows
 you to view your stored state and manipulate your state history. By default, the monitor is NOT imported
@@ -77,13 +76,13 @@ There is also an option to use store-logger which outputs to the console instead
 To set your development mode store logging preference, go to the constant.js file and edit the `STORE_DEV_TOOLS` constant.
 Available options are `monitor | logger | both | none`
 
-### HMR (Hot Module Replacement)
+#### HMR (Hot Module Replacement)
 
 HMR mode allows you to update a particular module without reloading the entire application.
 The current state of your app is also stored in @ngrx/store allowing you to make updates to your
 code without losing your currently stored state.
 
-### AOT  Don'ts
+#### AOT  Don'ts
 
 The following are some things that will make AOT compile fail.
 
@@ -94,17 +93,17 @@ The following are some things that will make AOT compile fail.
 - DonвЂ™t use functions in your providers, routes or declarations, export a function and then reference that function name
 - Inputs, Outputs, View or Content Child(ren), Hostbindings, and any field you use from the template or annotate for Angular should be public
 
-### Testing
+#### Testing
 
 For unit tests, use `yarn run test` for continuous testing in watch mode and use
 `yarn run test:once` for single test. To view code coverage after running test, open `coverage/html/index.html` in your browser.
 
 For e2e tests, use `yarn run e2e`. To run unit test and e2e test at the same time, use `yarn run ci`.
 
-### Wiki Links
+#### Wiki Links
 
 [Recommended Steps for merging this starter into existing project](https://github.com/qdouble/angular-webpack2-starter/wiki/Recommended-Steps-for-Merging-Starter-into-Existing-Project)
 
-### License
+#### License
 
-[GPL](https://github.com/qdouble/angular-webpack2-starter/blob/master/LICENSE)
+[Affero GPL](https://github.com/iproduct/reactive-dot/blob/master/LICENSE)
