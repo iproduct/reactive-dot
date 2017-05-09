@@ -13,7 +13,9 @@
     "strictNullChecks": false,
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ], 
+    "skipLibCheck": true,
+    "types": ["node", "jasmine"]
   },
   "exclude": [
     "node_modules",

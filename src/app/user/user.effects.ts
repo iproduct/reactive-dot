@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 
 import { UserActions } from './user.actions';
-import { AppState } from '../reducers';
+import { State } from '../reducers';
 import { UserService } from './user.service';
 
 @Injectable()
@@ -13,7 +13,7 @@ import { UserService } from './user.service';
 export class UserEffects {
   constructor(
     private actions$: Actions,
-    private store: Store<AppState>,
+    private store: Store<State>,
     private userService: UserService,
     private userActions: UserActions
   ) { }

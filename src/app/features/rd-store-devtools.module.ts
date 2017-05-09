@@ -14,10 +14,10 @@ if (ENV === 'development' && !AOT &&
 ]);
 
 @NgModule({
-  imports: [CommonModule, IMPORTS],
+  imports: [CommonModule, StoreLogMonitorModule, IMPORTS],
   declarations: [StoreDevToolsComponent],
   exports: [StoreDevToolsComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
-export class StoreDevToolsModule { }
+export class RDStoreDevToolsModule { }

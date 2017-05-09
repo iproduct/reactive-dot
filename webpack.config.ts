@@ -286,7 +286,7 @@ const clientConfig = function webpackConfig(): WebpackConfig {
       disableDotRule: true,
     },
     stats: 'minimal',
-    host: '0.0.0.0',
+    host: 'localhost',
     watchOptions: DEV_SERVER_WATCH_OPTIONS
   };
 

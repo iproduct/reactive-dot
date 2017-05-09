@@ -3,6 +3,9 @@
 
 @import 'variables';
 @import '@angular/material/theming';
+@import 'primeng/resources/primeng.min';
+@import 'theme';
+
 // Plus imports for other components in your app.
 
 // Include the base styles for Angular Material core. We include this here so that you only
@@ -16,7 +19,7 @@ $primary: mat-palette($mat-blue);
 $accent:  mat-palette($mat-pink, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$warn:    mat-palette($mat-red);
+$warn:    mat-palette($mat-red); 
 
 // Create the theme object (a Sass map containing all of the palettes).
 $theme: mat-light-theme($primary, $accent, $warn);

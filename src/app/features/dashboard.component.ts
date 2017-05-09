@@ -4,13 +4,13 @@ import { Subject } from 'rxjs/Subject';
 import { Observable } from 'rxjs/Observable';
 import { TransferHttp } from '../../modules/transfer-http/transfer-http';
 
-import { AppState } from '../reducers';
+import { State } from '../reducers';
 import { Store } from '@ngrx/store';
 import { UserActions } from '../user/user.actions';
 import { User } from '../user/user.model';
 
 @Component({
-  selector: 'my-dashboard',
+  selector: 'rd-dashboard',
   templateUrl: './dashboard.component.html',
   styles: [`#my-logout-button { background: #F44336 }`]
 })
@@ -25,7 +25,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
   constructor(
     private fb: FormBuilder,
     private http: TransferHttp,
-    private store: Store<AppState>,
+    private store: Store<State>,
     private userActions: UserActions,
   ) {
     this.form = fb.group({

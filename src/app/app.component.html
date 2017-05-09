@@ -1,3 +1,20 @@
+<rd-layout>
+  <rd-sidenav [open]="showSidenav$ | async" [mode]="sideNavMode">
+    <rd-nav-item (activate)="closeSidenav()" routerLink="/" icon="book" hint="View your book collection">
+      My Collection
+    </rd-nav-item>
+    <rd-nav-item (activate)="closeSidenav()" routerLink="/book/find" icon="search" hint="Find your next book!">
+      Browse Books
+    </rd-nav-item>
+    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
+  </rd-sidenav>
+  <rd-toolbar (openMenu)="openSidenav()">
+    Book Collection
+  </rd-toolbar>
+
+  <router-outlet></router-outlet>
+</rd-layout>
+
 <!--<md-sidenav-container fullscreen>
   <md-sidenav [opened]="!mobile" #sidenav [mode]="sideNavMode">
     <md-nav-list>
@@ -15,11 +32,11 @@
       <md-icon>menu</md-icon>
     </button> Angular Starter App
   </md-toolbar>
-<md-card id="my-page-card">-->
-  <ul *ngFor="let view of views">
-    <li><a [routerLink]="view.link">{{view.name}}</a></li>
-  </ul>
-  <router-outlet (activate)="activateEvent($event)" (deactivate)="deactivateEvent($event)"></router-outlet>
-<!--</md-card>
+  <md-card id="my-page-card">-->
+<!--<ul *ngFor="let view of views">
+      <li><a [routerLink]="view.link">{{view.name}}</a></li>
+    </ul>
+    <router-outlet (activate)="activateEvent($event)" (deactivate)="deactivateEvent($event)"></router-outlet>
+  </md-card>
 </md-sidenav-container>-->
-<my-store-devtools *ngIf="showMonitor"></my-store-devtools>
+<!--<rd-store-devtools *ngIf="showMonitor"></rd-store-devtools>-->

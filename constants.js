@@ -49,13 +49,15 @@ exports.STORE_DEV_TOOLS = 'monitor'
 exports.EXCLUDE_SOURCE_MAPS = [
   // these packages have problems with their sourcemaps
   root('node_modules/@angular'),
-  root('node_modules/rxjs')
+  root('node_modules/rxjs'),
+  root('node_modules/angular-sortablejs')
 ]
 
 exports.MY_COPY_FOLDERS = [
   // use this for folders you want to be copied in to Client dist
   // src/assets and index.html are already copied by default.
   // format is { from: 'folder_name', to: 'folder_name' }
+    { from: 'node_modules/font-awesome', to: 'assets/fonts/font-awesome'},
 ]
 
 exports.MY_POLYFILL_DLLS = [
