@@ -20,6 +20,7 @@ import { BookEffects } from './effects/book';
 import { CollectionEffects } from './effects/collection';
 import { BooksModule } from './books/books.module';
 import { PanelMenuModule, MenuModule } from 'primeng/primeng';
+import { ComposerModule } from './composer/composer.module';
 
 const STORE_DEV_TOOLS_IMPORTS = [];
 if (ENV === 'development' && !AOT &&
@@ -48,8 +49,6 @@ if (ENV === 'development' && !AOT &&
 
 export const APP_IMPORTS = [
   MaterialModule,
-  MenuModule,
-  PanelMenuModule,
   EffectsModule.run(UserEffects),
   ReactiveFormsModule,
   RouterModule.forRoot(routes, { useHash: false, preloadingStrategy: PreloadAllModules }),
@@ -84,5 +83,6 @@ export const APP_IMPORTS = [
   RDStoreDevToolsModule,
   TransferHttpModule,
   CommonModule,
-  BooksModule
+  BooksModule,
+  ComposerModule
 ];

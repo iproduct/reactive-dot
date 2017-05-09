@@ -1,12 +1,14 @@
 <rd-layout>
   <rd-sidenav [open]="showSidenav$ | async" [mode]="sideNavMode">
+    <rd-nav-item (activate)="closeSidenav()" routerLink="/composer" icon="format_shapes" hint="Compose your reactive streams">
+      ReactiveDot Composer
+    </rd-nav-item>
     <rd-nav-item (activate)="closeSidenav()" routerLink="/" icon="book" hint="View your book collection">
       My Collection
     </rd-nav-item>
     <rd-nav-item (activate)="closeSidenav()" routerLink="/book/find" icon="search" hint="Find your next book!">
       Browse Books
     </rd-nav-item>
-    <p-panelMenu [model]="items" [style]="{'width':'300px'}"></p-panelMenu>
   </rd-sidenav>
   <rd-toolbar (openMenu)="openSidenav()">
     Book Collection

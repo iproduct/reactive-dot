@@ -23,13 +23,13 @@
                 </li>
             </ul>
         </div>
-        <ul [sortablejs]="selectedItems" style="margin:0;padding:0" class="ui-grid-col-6 ui-widget-content" pDroppable="items" (onDrop)="drop($event)"
+       <!-- <ul [sortablejs]="selectedItems" style="margin:0;padding:0" class="ui-grid-col-6 ui-widget-content" pDroppable="items" (onDrop)="drop($event)"
             [ngClass]="{'ui-state-highlight':draggedItem}">
             <li *ngFor="let item of selectedItems" class="ui-state-default ui-helper-clearfix">
                 <img md-card-sm-image *ngIf="item.volumeInfo?.imageLinks?.smallThumbnail" [src]="item.volumeInfo?.imageLinks?.smallThumbnail"
                     style="float:left" draggable="false" />
                 <div style="margin:8px 0 0 8px;float:left">{{item.volumeInfo?.title | bcEllipsis:35}} - {{ item.volumeInfo?.authors | bcAddCommas }}</div>
             </li>
-        </ul>
+        </ul>-->
     </div>
 </div>
