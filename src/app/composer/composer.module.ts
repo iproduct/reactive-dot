@@ -11,6 +11,9 @@ import { ComposerPageComponent } from './containers/composer-page/composer-page'
 import { ComposedComponent } from './components/composed/composed.component';
 import { RdPanelMenuModule } from './components/panel-menu/panel-menu.component';
 import { RdSortableModule } from '../common/rd-sortable/rd-sortable.module';
+import { DndModule } from 'ng2-dnd';
+import { DemoDndModule } from '../common/dnd/demo-dnd.module';
+import { PanelModule } from 'primeng/primeng';
 
 
 export const COMPONENTS = [
@@ -26,7 +29,10 @@ export const COMPONENTS = [
     RouterModule,
     PipesModule,
     CommonModule,
+    PanelModule,
     RdPanelMenuModule,
+    DndModule,
+    DemoDndModule,
     RdSortableModule.forRoot({ animation: 150 })
   ],
   declarations: COMPONENTS,

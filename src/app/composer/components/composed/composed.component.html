@@ -1,6 +1,7 @@
-<div rdSortable [rdSortableOptions]="options" style="margin:0;padding:0" 
+<div [rdSortable]="currentItems" [rdSortableOptions]="options" style="margin:0;padding:0" 
   class="ui-grid-col-6 ui-widget-content" [ngClass]="{'ui-state-highlight':draggedItem}">
-  <div *ngFor="let item of items" >
+  <div *ngFor="let item of currentItems" >
     {{item.label | bcEllipsis:35}}
   </div>
 </div>
+{{currentItems|json}}

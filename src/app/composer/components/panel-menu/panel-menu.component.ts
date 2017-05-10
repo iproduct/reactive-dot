@@ -38,9 +38,9 @@ export class BasePanelMenuItem {
 @Component({
     selector: 'rd-panel-menu-sub',
     template: `
-        <ul class="ui-menu-list ui-helper-reset" [style.display]="expanded ? 'block' : 'none'" rdSortable
+        <div class="ui-menu-list ui-helper-reset" [style.display]="expanded ? 'block' : 'none'" rdSortable
             [rdSortableOptions]="options">
-            <li *ngFor="let child of item.items" class="ui-menuitem ui-corner-all" [ngClass]="{'ui-menu-parent':child.items}"
+            <div *ngFor="let child of item.items" class="ui-menuitem ui-corner-all" [ngClass]="{'ui-menu-parent':child.items}"
                 [pTooltip]="child.hint">
                 <a *ngIf="!child.routerLink" [href]="child.url||'#'" class="ui-menuitem-link ui-corner-all"
                     [ngClass]="{'ui-menuitem-link-hasicon':child.icon&&child.items,'ui-state-disabled':child.disabled}"
@@ -57,8 +57,8 @@ export class BasePanelMenuItem {
                     <span class="ui-menuitem-text">{{child.label}}</span>
                 </a>
                 <rd-panel-menu-sub [item]="child" [expanded]="child.expanded" *ngIf="child.items"></rd-panel-menu-sub>
-            </li>
-        </ul>
+            </div>
+        </div>
     `
 })
 export class RdPanelMenuSubComponent extends BasePanelMenuItem {

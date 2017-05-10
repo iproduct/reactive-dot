@@ -21,8 +21,8 @@ export class RdSortableDirective implements OnInit, OnChanges, OnDestroy {
   @Input() runInsideAngular = false;
 
   constructor(private sortablejsService: RdSortableService,
-              private element: ElementRef,
-              private zone: NgZone) {}
+    private element: ElementRef,
+    private zone: NgZone) { }
 
   public ngOnInit() {
     if (this.runInsideAngular) {
@@ -79,33 +79,33 @@ export class RdSortableDirective implements OnInit, OnChanges, OnDestroy {
     // allows to forget about tracking this.items changes
     return {
       onAdd: (event: SortableEvent) => {
-        if (this.bindingEnabled) {
-          this.sortablejsService.onremove = (item: any) => {
-            if (this.isItemsFormArray) {
-                this.items.insert(event.newIndex, item);
-            } else {
-                this.items.splice(event.newIndex, 0, item);
-            }
-          };
-        }
+        // if (this.bindingEnabled) {
+        //   this.sortablejsService.onremove = (item: any) => {
+        //     if (this.isItemsFormArray) {
+        //         this.items.insert(event.newIndex, item);
+        //     } else {
+        //         this.items.splice(event.newIndex, 0, item);
+        //     }
+        //   };
+        // }
 
         this.proxyEvent('onAdd', event);
       },
       onRemove: (event: SortableEvent) => {
-        if (this.bindingEnabled) {
-          let item: any;
+        // if (this.bindingEnabled) {
+        //   let item: any;
 
-          if (this.isItemsFormArray) {
-              item = this.items.at(event.oldIndex);
-              this.items.removeAt(event.oldIndex);
-          } else {
-              // item = this.items.splice(event.oldIndex, 1)[0];
-              item = this.items[event.oldIndex];
-          }
+        //   if (this.isItemsFormArray) {
+        //       item = this.items.at(event.oldIndex);
+        //       this.items.removeAt(event.oldIndex);
+        //   } else {
+        //       // item = this.items.splice(event.oldIndex, 1)[0];
+        //       item = this.items[event.oldIndex];
+        //   }
 
-          this.sortablejsService.onremove(item);
-          this.sortablejsService.onremove = null;
-        }
+        //   this.sortablejsService.onremove(item);
+        //   this.sortablejsService.onremove = null;
+        // }
 
         this.proxyEvent('onRemove', event);
       },
@@ -128,4 +128,4 @@ export class RdSortableDirective implements OnInit, OnChanges, OnDestroy {
 
 }
 
-interface SortableEvent { oldIndex: number; newIndex: number; }
+interface SortableEvent { oldIndex: number; newIndex: number; item?: any; clone?: any; }

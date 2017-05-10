@@ -123,6 +123,7 @@
     "hammerjs": "~2.0.8",
     "ip": "~1.1.5",
     "methods": "1.1.2",
+    "ng2-dnd": "^4.0.2",
     "ngrx-store-freeze": "0.1.9",
     "ngrx-store-logger": "0.1.7",
     "primeng": "^4.0.0",

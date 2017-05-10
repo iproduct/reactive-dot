@@ -12,7 +12,7 @@ import { RdSortableOptions } from '../../../common/rd-sortable/rd-sortable-optio
 
 @Component({
   selector: 'rd-composer-page',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  // changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './composer-page.html'
 })
 export class ComposerPageComponent implements OnInit {
@@ -37,7 +37,13 @@ export class ComposerPageComponent implements OnInit {
         [{
           label: 'interval(period: number)',
           icon: 'fa-clock-o',
-          hint: 'Creates an Observable that emits sequential numbers every specified interval of time'
+          hint: 'Creates an Observable that emits sequential numbers every specified interval of time.'
+        },
+        {
+          label: 'of(values: ...T)',
+          icon: 'fa-clock-o',
+          // tslint:disable-next-line:max-line-length
+          hint: 'Creates an Observable that emits some values you specify as arguments, immediately one after the other, and then emits a complete notification.'
         },
         {
           label: 'New',
